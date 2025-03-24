@@ -4,6 +4,7 @@ from taxjar.exceptions import TaxJarResponseError
 from taxjar.factory import TaxJarTypeFactory
 from taxjar.response import TaxJarResponse
 
+
 class TestTaxJarFactory(unittest.TestCase):
     def setUp(self):
         self.response_data = {}
@@ -13,8 +14,10 @@ class TestTaxJarFactory(unittest.TestCase):
         self.request.status_code = 200
         self.request.json = MagicMock(return_value={'type': 'value'})
         with patch.object(TaxJarTypeFactory, 'build') as factory_mock:
+            factory_mock.return_value = MagicMock()
             TaxJarResponse().data_from_request(self.request)
-            factory_mock.called_with('type').return_value.called_with('value')
+            factory_mock.assert_called_with('type')
+            factory_mock.return_value.assert_called_with('value')
 
     def test_data_from_failed_400_request(self):
         self.request.status_code = 400

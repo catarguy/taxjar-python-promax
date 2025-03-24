@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='taxjar',
-    version='2.0.0',
+    version='2.1.0',
     description='Sales tax API client for Python',
     author='TaxJar',
     author_email='support@taxjar.com',
@@ -21,13 +21,11 @@ setup(
         "Topic :: Office/Business",
         "Topic :: Office/Business :: Financial",
         "Topic :: Office/Business :: Financial :: Accounting",
-        "Topic :: Software Development :: Libraries :: Python Modules"
+        "Topic :: Software Development :: Libraries :: Python Modules",
     ],
     install_requires=[
         'requests >= 2.13.0',
-        'jsonobject >= 0.9.10'
+        'jsonobject >= 0.9.10' 'setuptools >= 78.0.1',
     ],
-    tests_require=[
-        'mock'
-    ]
+    tests_require=['mock'],
 )
