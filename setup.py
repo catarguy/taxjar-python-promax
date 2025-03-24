@@ -1,13 +1,13 @@
 from setuptools import setup
 
 setup(
-    name='taxjar',
+    name='taxjar-promax',
     version='2.1.0',
-    description='Sales tax API client for Python',
+    description='Sales tax API client for Python - Pro Max Edition',
     author='TaxJar',
     author_email='support@taxjar.com',
-    url='https://github.com/taxjar/taxjar-python',
-    download_url='https://github.com/taxjar/taxjar-python/archive/v2.0.0.zip',
+    url='https://github.com/catarguy/taxjar-python-promax',
+    download_url='https://github.com/catarguy/taxjar-python-promax/archive/v2.1.0.zip',
     packages=['taxjar', 'taxjar.data'],
     classifiers=[
         "Programming Language :: Python :: 2.6",
