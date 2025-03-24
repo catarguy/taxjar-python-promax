@@ -25,7 +25,8 @@ setup(
     ],
     install_requires=[
         'requests >= 2.13.0',
-        'jsonobject >= 0.9.10' 'setuptools >= 78.0.1',
+        'jsonobject >= 0.9.10',
+        'setuptools >= 78.0.1'
     ],
     tests_require=['mock'],
 )
